@@ -1,0 +1,42 @@
+@import "../globals.css";
+
+.orders {
+  button {
+    @apply text-[var(--color-text)] border border-[var(--color-border)];
+  }
+
+  button:disabled {
+    @apply cursor-not-allowed;
+  }
+
+  input, textarea {
+    @apply bg-[var(--color-bg-dark)] text-[var(--color-text)] border border-[var(--color-border)] focus:ring-[var(--color-accent)];
+  }
+
+  /* Remove number pickers from input[type="number"] */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* For Firefox */
+  }
+
+  label {
+    @apply text-[var(--color-text)] font-semibold;
+  }
+
+  table {
+    @apply border border-[var(--color-border)];
+  }
+
+  th, td {
+    @apply border border-[var(--color-border)] text-[var(--color-text)];
+  }
+
+  #react-select-product-select-input {
+    box-shadow: none;
+  }
+}
+
